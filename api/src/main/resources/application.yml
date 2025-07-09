@@ -1,3 +1,19 @@
 spring:
-    application:
-        name: argus_api
+    application:  
+        name: argus
+
+    datasource:
+        url: ${DATABASE_URL}
+        username: ${DATABASE_USERNAME}
+        password: ${DATABASE_PASSWORD}
+
+app:
+  cors:
+    corsOriginPatterns: ${CORS_ORIGIN_PATTERNS}
+
+springdoc:
+  swagger-ui:
+    use-root-path: true
+
+server:
+  port: ${API_PORT}
